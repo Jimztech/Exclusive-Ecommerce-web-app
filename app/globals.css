@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
-@plugin "flowbite-react/plugin/tailwindcss";
-@source "../.flowbite-react/class-list.json";
 
 @theme inline {
   --color-background: var(--background);
