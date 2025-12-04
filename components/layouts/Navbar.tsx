@@ -15,13 +15,13 @@ export default function NavBar() {
     ]
 
     return (
-        <div>
+        <div className="">
             {/* Desktop view */}
-            <nav className="hidden lg:block relative">
-                <div className="flex flex-row justify-between items-center py-6 px-10 border-b border-gray-400 fixed top-0 right-0 left-0">
+            <nav className="hidden lg:block relative z-50">
+                <div className="flex flex-row justify-between items-center py-6 px-10 border-b border-gray-400 fixed top-0 right-0 left-0 bg-gray-400">
                     {/* Left section */}
                     <section>
-                        <Link href={"/"} className="text-2xl font-semibold">Exclusive</Link>
+                        <Link href={"/"} className="text-2xl font-semibold text-red-500">Exclusive</Link>
                     </section>
 
                     {/* Menu items midsection */}
