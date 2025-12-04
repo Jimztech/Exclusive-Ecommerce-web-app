@@ -10,7 +10,7 @@ export default function Header() {
         <div className="">
             <NavBar />
 
-            <section className="lg:grid lg:grid-cols-[1fr_2fr] px-10 z-30">
+            <section className="lg:grid lg:grid-cols-[1fr_2fr] px-4 lg:px-10 z-30">
                 {/* Hero section for multiple items available on desktop and not on mobile */}
                 <div className="hidden lg:block lg:pt-30 relative after:content-[''] after:absolute after:top-21 after:right-0 after:bottom-0 after:border-l after:border-solid after:border-gray-500">
                     <ul className="space-y-4 pr-8">
