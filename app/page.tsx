@@ -4,6 +4,8 @@ import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { StarIcon, CirclePlus, CircleMinus } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const [timeRemaining, setTimeRemaining] = useState(345600);
@@ -62,67 +64,146 @@ export default function Home() {
         {/* product section */}
         <section className="my-4 grid grid-cols-2 md:grid-cols-4 gap-2">
 
-          <div  className="border-2 border-yellow-300">
+          <div  className="flex flex-col justify-between relative">
             <Image 
-              src="/flash-sales/game-pad.jpg"
-              width={100}
-              height={100}
+              src="/flash-sales/test-gamepad2.jpg"
+              width={250}
+              height={250}
               alt="game pad"
-              className="block"
+              className="block rounded-sm"
             />
 
-            <div>
-              <p>Havit HV-G92 Gamepad</p>
-              <p>₦250</p>
-              <p>₦400</p>
-            </div>
-          </div>
+            <Button
+              className="absolute bottom-2 top-30 right-22 flex gap-2"
+            >
+              <CircleMinus className="hidden lg:block" />
+              Add to Cart
+              <CirclePlus className="hidden lg:block" />
+            </Button>
 
-          <div className="border-2 border-yellow-300">
-            <Image 
-              src="/flash-sales/keyboard.jpg"
-              width={100}
-              height={100}
-              alt="keyboard"
-              className="block"
-            />
-
-            <div>
-              <p>AK-900 Wired Keyboard</p>
-              <p>₦500</p>
-              <p>₦1000</p>
-            </div>
-          </div>
-
-          <div className="border-2 border-yellow-300">
-            <Image 
-              src="/flash-sales/monitor.jpg"
-              width={100}
-              height={100}
-              alt="monitor"
-              className="block"
-            />
-            
             <section>
-              <p>LCD Gaming Monitor</p>
-              <p>₦15000</p>
-              <p>₦35000</p>
+              <p>Havit HV-G92 Gamepad</p>
+
+              <div className="flex items-center gap-4">
+                <p className="text-lg text-red-500">₦250</p>
+                <p className="line-through text-gray-500">₦400</p>
+              </div>
+
+              <div className='flex items-center gap-1'>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 stroke-amber-500 dark:stroke-amber-400'></StarIcon>
+              </div>
+
             </section>
           </div>
 
-          <div className="border-2 border-yellow-300">
+          <div className="flex flex-col justify-between relative">
             <Image 
-              src="/flash-sales/shoes.jpg"
-              width={100}
-              height={100}
-              alt="shoes"
-              className="block"
+              src="/flash-sales/keyboard.jpg"
+              width={250}
+              height={250}
+              alt="keyboard"
+              className="block rounded-sm"
             />
 
+            <Button
+              className="absolute bottom-2 top-30 right-22 flex gap-2"
+            >
+              <CircleMinus className="hidden lg:block" />
+              Add to Cart
+              <CirclePlus className="hidden lg:block" />
+            </Button>
+
             <section>
-              <p>Yeezy&apos;s pair of Sneakers</p>
-              <p>₦4000</p>
-              <p>₦7000</p>
+              <p>AK-900 Wired Keyboard</p>
+
+              <div className="flex items-center gap-4">
+                <p className="text-lg text-red-500">₦500</p>
+                <p className="line-through text-gray-500">₦1000</p>
+              </div>
+
+               <div className='flex items-center gap-1'>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 stroke-amber-500 dark:stroke-amber-400'></StarIcon>
+              </div>
+
+            </section>
+          </div>
+
+          <div className="flex flex-col justify-between relative">
+            <Image 
+              src="/flash-sales/test-tv.jpg"
+              width={250}
+              height={250}
+              alt="monitor"
+              className="block rounded-sm"
+            />
+            
+            <Button
+              className="absolute bottom-2 top-30 right-22 flex gap-2"
+            >
+              <CircleMinus className="hidden lg:block" />
+              Add to Cart
+              <CirclePlus className="hidden lg:block" />
+            </Button>
+
+            <section className="py-4 space-y-2">
+              <p className="text-2xl">LCD Gaming Monitor</p>
+
+              <div className="flex items-center gap-4">
+                <p className="text-lg text-red-500">₦15000</p>
+                <p className="line-through text-gray-500">₦35000</p>
+              </div>
+
+               <div className='flex items-center gap-1'>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 stroke-amber-500 dark:stroke-amber-400'></StarIcon>
+              </div>
+            </section>
+          </div>
+
+          <div className="flex flex-col justify-between relative">
+            <Image 
+              src="/flash-sales/shoes.jpg"
+              width={250}
+              height={250}
+              alt="shoes"
+              className="block rounded-sm"
+            />
+
+            <Button
+              className="absolute bottom-2 top-30 right-22 flex gap-2"
+              >
+                <CircleMinus className="hidden lg:block" />
+                Add to Cart
+                <CirclePlus className="hidden lg:block" />
+              </Button>
+
+            <section className="py-4 space-y-2">
+              <p className="text-2xl">Yeezy&apos;s pair of Sneakers</p>
+
+              <div className="flex items-center gap-4">
+                <p className="text-lg text-red-500">₦4000</p>
+                <p className="line-through text-gray-500">₦7000</p>
+              </div>
+
+              <div className='flex items-center gap-1'>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 fill-amber-500 stroke-amber-500 dark:fill-amber-400 dark:stroke-amber-400'></StarIcon>
+                <StarIcon className='size-5 stroke-amber-500 dark:stroke-amber-400'></StarIcon>
+              </div>
+
             </section>
           </div>
 
